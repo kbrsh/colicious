@@ -1,0 +1,9 @@
+body {
+  color: white;
+  background: black;
+}
+
+#info {
+  top: 50%;
+  transform: translateY(-50%);
+}
