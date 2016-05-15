@@ -19,7 +19,7 @@ body {
   color: inherit;
   border: none;
   background: transparent;
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 .noStyle::focus {
