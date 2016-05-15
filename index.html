@@ -10,6 +10,7 @@
   <meta name="author" content="Kabir Shah">
 
   <title>Colicious</title>
+  <link rel="stylesheet" type="text/css" href="./css/lib/balloon.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/lib/feather.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/styles.css" />
   <link rel="shortcut icon" type="image/png" href="/favicon.png" />
@@ -20,12 +21,13 @@
 <body>
   <div class="contain text-center animate fadeIn">
     <div class="notFooter">
-    <h1 id="color" class="centered"></h1>
+    <button class="noStyle" data-clipboard-target="#color"><h1 id="color" class="centered" data-balloon="Click To Copy Me To Clipboard" data-balloon-pos="up"></h1></button>
   </div>
     <footer id="footer">
-        Made with <span id="heart">&#9825;</span> By Kabir
+        Made with <span id="heart" class="animate pulse">&#9825;</span> By Kabir
     </footer>
   </div>
+  <script src="./js/lib/clipboard.min.js"></script>
   <script src="./js/lib/paint.min.js"></script>
   <script src="./js/scripts.js"></script>
 </body>

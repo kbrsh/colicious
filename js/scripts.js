@@ -1,4 +1,5 @@
 var color;
+new Clipboard('.noStyle');
 
 var getURLParameters = function(url) {
     var result = {};
@@ -46,5 +47,10 @@ $(document).ready(function() {
     updateColor();
   });
 
+  $('.noStyle').on("click", function(e) {
+    e.preventDefault;
+  });
+
   updateColor();
+
 });

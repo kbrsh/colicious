@@ -11,6 +11,16 @@ body {
   transition: all 2s ease;
 }
 
+.noStyle {
+  color: inherit;
+  border: none;
+  background: transparent;
+}
+
+.noStyle::focus {
+  outline: none;
+}
+
 .contain {
   transition: all 2s ease;
 }
