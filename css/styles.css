@@ -4,9 +4,13 @@ body {
   text-align: center;
   display: block;
   overflow-x: hidden;
+  overflow: hidden;
 }
 
-
+.contain {
+  height: 100%;
+  width: 100%;
+}
 #loading {
   transition: all 2s ease;
 }
@@ -15,6 +19,7 @@ body {
   color: inherit;
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 .noStyle::focus {
@@ -26,10 +31,12 @@ body {
 }
 #footer {
   position: absolute;
-  width: 100%;
   bottom: 5%;
-  left: 40%;
+  right: 5%;
 }
+
+
+
 
 #footer >  a {
   position: relative;
@@ -145,5 +152,41 @@ body {
   }
   40% {
     box-shadow: 0 2.5em 0 0;
+  }
+}
+
+/* Ripple Effect */
+.ripple {
+  position: absolute;
+  border-radius: 100%;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: scale-in 1s ease-in-out;
+          animation: scale-in 1s ease-in-out;
+  -webkit-transition: opacity 0.5s 0.5s ease-out;
+  transition: opacity 1s 0.5s ease-out;
+  opacity: 0.5;
+}
+
+@-webkit-keyframes scale-in {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
   }
 }
