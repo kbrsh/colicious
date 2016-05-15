@@ -25,15 +25,26 @@ function updateColor() {
   $('body').css('background', color);
 }
 
+$('.notFooter').hide();
+document.write("<div class='centered text-center' id='loading'><h1>Colicious</h1><br><p>Press Space OR Click For A New Color</p><div class='loader'></div></div>")
+$(document).ready(function() {
+  setTimeout(function() {
+    $('#loading').addClass("animate");
+    $("#loading").addClass("fadeOut");
+    setTimeout(function() {
+      $('#loading').hide();
+      $('.notFooter').show();
+  }, 500);
+}, 1000);
+  document.body.onkeyup = function(e){
+      if(e.keyCode == 32){
+          updateColor();
+      }
+  }
 
-document.body.onkeyup = function(e){
-    if(e.keyCode == 32){
-        updateColor();
-    }
-}
+  document.addEventListener("click", function() {
+    updateColor();
+  });
 
-document.addEventListener("click", function() {
   updateColor();
 });
-
-updateColor();
