@@ -29,6 +29,9 @@ $(document).ready(function() {
   }, 500);
 }, 1000);
 
+$("#copyMessage").css("display", "none");
+$("#copyMessage").css("opacity", "1");
+
 
   document.onkeyup = function(e){
       if(e.keyCode == 32){
@@ -55,9 +58,17 @@ $(document).ready(function() {
   });
 
 
-
   $('.noStyle').on("click", function(e) {
-    e.stopPropagation();
+    $(".notFooter").hide();
+    $("#copyMessage").css('display', '');
+    $("#copyMessage").addClass("fadeIn");
+
+    setTimeout(function() {
+      $("#copyMessage").removeClass("fadeIn");
+      $("#copyMessage").addClass("fadeOut");
+      $("#copyMessage").css("display", "none")
+      $(".notFooter").show();
+    }, 1000);
   });
 
   updateColor(colorGen());
