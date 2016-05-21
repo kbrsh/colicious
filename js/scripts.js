@@ -34,6 +34,7 @@ $(document).ready(function() {
       if(e.keyCode == 32){
           updateColor(colorGen());
           $("#back").css("opacity", "1");
+          $("#back").removeClass("notBack");
       }
       e.preventDefault();
   }
@@ -41,20 +42,22 @@ $(document).ready(function() {
   $("html").on("click", function(e) {
     updateColor(colorGen());
     $("#back").css("opacity", "1");
+    $("#back").removeClass("notBack");
     e.preventDefault();
   });
 
   document.getElementById("back").addEventListener("click", function(e) {
+      updateColor(previousColor);
+      $("#back").css("opacity", "0");
+      $("#back").addClass("notBack");
     e.stopPropagation();
-    updateColor(previousColor);
-    $("#back").css("opacity", "0");
     e.preventDefault();
   });
 
 
 
   $('.noStyle').on("click", function(e) {
-    e.preventDefault;
+    e.stopPropagation();
   });
 
   updateColor(colorGen());

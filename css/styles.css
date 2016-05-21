@@ -8,6 +8,7 @@ body {
   transition: background 0.5s ease;
 }
 
+
 .contain {
   height: 100%;
   width: 100%;
@@ -99,6 +100,11 @@ body {
 #back:focus {
   outline: none;
 }
+
+.notBack {
+  cursor: default !important;
+}
+
 
 @-webkit-keyframes fadeOut {
   0% {
