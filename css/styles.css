@@ -29,6 +29,12 @@ body {
 .contain {
   transition: all 2s ease;
 }
+
+#logo {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
 #footer {
   position: absolute;
   bottom: 5%;
