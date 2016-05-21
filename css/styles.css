@@ -92,7 +92,6 @@ body {
   position: absolute;
   bottom: 5%;
   left: 5%;
-  font-size: 5vh;
   cursor: pointer;
   transition: all 1s ease;
 }
