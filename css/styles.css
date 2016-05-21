@@ -5,6 +5,7 @@ body {
   display: block;
   overflow-x: hidden;
   overflow: hidden;
+  transition: background 0.5s ease;
 }
 
 .contain {
@@ -80,6 +81,23 @@ body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#back {
+  opacity: 0;
+  background: transparent;
+  border: none;
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: 5vh;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+#back:focus {
+  outline: none;
 }
 
 @-webkit-keyframes fadeOut {
