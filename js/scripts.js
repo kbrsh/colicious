@@ -49,6 +49,10 @@ $("#copyMessage").css("opacity", "1");
     e.preventDefault();
   });
 
+  document.getElementById("linkP").addEventListener("click", function(e) {
+    e.stopPropagation();
+  });
+
   document.getElementById("back").addEventListener("click", function(e) {
       updateColor(previousColor);
       $("#back").css("opacity", "0");
