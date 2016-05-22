@@ -1,5 +1,5 @@
 var color, previousColor;
-new Clipboard('.noStyle');
+var clipboard = new Clipboard('.noStyle');
 window.onunload = changeTitle
 window.onblur = changeTitle
 window.onfocus = function() {
@@ -71,7 +71,9 @@ $("#copyMessage").css("opacity", "1");
   });
 
 
-  $('.noStyle').on("click", function(e) {
+  
+
+  clipboard.on('success', function(e) {
     $(".notFooter").hide();
     $("#copyMessage").css('display', '');
     $("#copyMessage").addClass("fadeIn");
@@ -82,7 +84,9 @@ $("#copyMessage").css("opacity", "1");
       $("#copyMessage").css("display", "none")
       $(".notFooter").show();
     }, 1000);
-  });
+
+    e.clearSelection();
+});
 
   updateColor(colorGen());
 
