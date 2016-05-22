@@ -8,7 +8,7 @@ window.onfocus = function() {
 
 
 function changeTitle() {
-  document.title = "We Miss You!"
+  document.title = "We Miss You - Colicious"
 }
 
 
