@@ -1,6 +1,15 @@
 var color, previousColor;
 new Clipboard('.noStyle');
+window.onunload = changeTitle
+window.onblur = changeTitle
+window.onfocus = function() {
+  document.title = "Colicious"
+}
 
+
+function changeTitle() {
+  document.title = "We Miss You!"
+}
 
 
 function colorGen() {
