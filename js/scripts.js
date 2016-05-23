@@ -22,7 +22,7 @@ var pressedK = [];
     }
   }, true);
 var surpriseK = function() {
-  alert('Try Editing the Text');
+  alert('Try Editing the Text, reload to reset :)');
   konamiActivated = true;
   document.getElementsByTagName("HTML")[0].setAttribute("contenteditable", "true");
   //(function() {var ds = document.getElementsByTagName('div');var d = ds[Math.round(Math.random()*ds.length)];function transform(r) {d.style.transform=d.style['WebkitTransform']=d.style['MozTransform']='scale(' + r + ')';setTimeout(function() {transform(++r % 10);}, 100);}transform(1);})();
