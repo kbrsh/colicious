@@ -197,4 +197,5 @@ var Ripples = function () {
     return Ripples;
 }();
 var html = document.querySelector("html")
-    var rippleHTML = new Ripples(html);*/
+    var rippleHTML = new Ripples(html);
+    */
