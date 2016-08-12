@@ -1,6 +1,7 @@
 var color, previousColor;
 var clipboard = new Clipboard('.noStyle');
 var konamiActivated = false;
+var colorHistory = [];
 window.onunload = changeTitle
 window.onblur = changeTitle
 window.onfocus = function() {
