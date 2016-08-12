@@ -26,8 +26,6 @@ var surpriseK = function() {
   alert('Try Editing the Text, reload to reset :)');
   konamiActivated = true;
   document.getElementsByTagName("HTML")[0].setAttribute("contenteditable", "true");
-  //(function() {var ds = document.getElementsByTagName('div');var d = ds[Math.round(Math.random()*ds.length)];function transform(r) {d.style.transform=d.style['WebkitTransform']=d.style['MozTransform']='scale(' + r + ')';setTimeout(function() {transform(++r % 10);}, 100);}transform(1);})();
-  //(function() {var ds = document.getElementsByTagName('div');var d = ds[Math.round(Math.random()*ds.length)];function transform(r) {d.style.transform=d.style['WebkitTransform']=d.style['MozTransform']='rotate(' + r + 'deg)';setTimeout(function() {transform(++r % 360);}, 100);}transform(1);})()
   (function(){var elems=document.getElementsByTagName("*");for(var i = 0; i<elems.length;i++){elems[i].style.fontFamily="Comic Sans MS";}})();
 };
 
@@ -37,6 +35,7 @@ function colorGen() {
 
 function updateColor(c) {
   previousColor = color;
+  colorHistory.push(color);
   color = c;
   $('#color').html(color);
   $('body').css('background', color);
