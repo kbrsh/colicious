@@ -38,7 +38,6 @@ function colorGen() {
 function updateColor(c) {
   previousColor = color;
   color = c;
-  //$('.ripple').css('background', previousColor);
   $('#color').html(color);
   $('body').css('background', color);
 }
