@@ -70,10 +70,14 @@ $("#copyMessage").css("opacity", "1");
   });
 
   $("html").on("click", function(e) {
-    updateColor(colorGen());
-    $("#back").css("opacity", "1");
-    $("#back").removeClass("notBack");
-    e.preventDefault();
+    if(e.target.id === "githubCorner") {
+      
+    } else {
+      updateColor(colorGen());
+      $("#back").css("opacity", "1");
+      $("#back").removeClass("notBack");
+      e.preventDefault();
+    }
   });
 
   document.getElementById("linkP").addEventListener("click", function(e) {
@@ -87,6 +91,7 @@ $("#copyMessage").css("opacity", "1");
     e.stopPropagation();
     e.preventDefault();
   });
+  
 
 
 
