@@ -1,5 +1,6 @@
 // Initial Variables
-var color, previousColor;
+var colors = [];
+var undos = 8; // for people whose hands are much faster than their brains ;)
 var clipboard = new Clipboard('.noStyle');
 var konamiActivated = false;
 window.onunload = changeTitle;
@@ -44,11 +45,22 @@ function colorGen() {
 
 // Update Color Function
 function updateColor(c) {
-  previousColor = color;
-  color = c;
+  if(c == 'undo'){
+    colors.pop();
+    if(colors.length == 0) {
+      colors.push(colorGen())
+    }
+  } else {
+    if(colors.length > undos) { 
+      colors.shift(); 
+    }
+    colors.push(c);
+  }
   //$('.ripple').css('background', previousColor);
-  $('#color').html(color);
-  $('body').css('background', color);
+  $('#color').html(colors[colors.length - 1]);
+  $('body').css('background', colors[colors.length - 1]);
+  $('#undos').html(colors.length - 1);
+  $('#undos').css('color', colors[colors.length - 1]);
 }
 
 // Add Loading
@@ -109,7 +121,7 @@ $(document).ready(function() {
 
   // EventListener for the back button
   document.getElementById('back').addEventListener('click', function(e) {
-    updateColor(previousColor);
+    updateColor('undo');
     $('#back').css('opacity', '0');
     $('#back').addClass('notBack');
     e.stopPropagation();
@@ -118,7 +130,7 @@ $(document).ready(function() {
 
   document.addEventListener('keyup',function(e){
       if(e.keyCode === 8 || e.keyCode === 37){
-          updateColor(previousColor);
+          updateColor('undo');
           $('#back').css('opacity', '0');
           $('#back').addClass('notBack');
           e.stopPropagation();
