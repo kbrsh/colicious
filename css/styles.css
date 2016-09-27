@@ -14,19 +14,6 @@ button {
   cursor: pointer;
 }
 
-#undos {
-  float: right;
-  margin-left: 3px;
-  border-radius: 50%;
-  font-size: 12px;
-  text-align: center;
-  font-weight: bold;
-  background-color: white;
-  color: black;
-  width: 15px;
-  height: 15px;
-  margin-bottom: 10px;
-}
 
 /* Contain(er) styling */
 
@@ -57,11 +44,11 @@ button {
   cursor: pointer;
   width: 80px;
   height: 80px;
-  fill:rgba(0, 0, 0, .4); 
-  color:#fff; 
-  position: absolute; 
-  top: 0; 
-  border: 0; 
+  fill:rgba(0, 0, 0, .4);
+  color:#fff;
+  position: absolute;
+  top: 0;
+  border: 0;
   right: 0;
 }
 
