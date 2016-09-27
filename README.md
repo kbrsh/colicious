@@ -2,7 +2,7 @@
 
 A delicious color generator.
 
-## Contributers
+## Contributors
 
 - [Kabir](http://kabir.ml)
 - [Marc](http://momueller.com/)
