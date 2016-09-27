@@ -2,7 +2,6 @@
 var colors = [];
 var undos = 8; // for people whose hands are much faster than their brains ;)
 var clipboard = new Clipboard('.noStyle');
-var konamiActivated = false;
 window.onunload = changeTitle;
 window.onblur = changeTitle;
 window.onfocus = function() {
@@ -17,26 +16,6 @@ function changeTitle() {
   }
 }
 
-// Suprise K
-var pressedK = [];
-var konamiCode = '38,38,40,40,37,39,37,39,66,65';
-window.addEventListener('keydown', function(k) {
-  pressedK.push(k.keyCode);
-  if (pressedK.toString().indexOf(konamiCode) >= 0) {
-    surpriseK();
-    pressedK = [];
-  }
-}, true);
-
-// supriseK Function
-var surpriseK = function() {
-  alert('Try Editing the Text, reload to reset :)');
-  konamiActivated = true;
-  document.getElementsByTagName('HTML')[0].setAttribute('contenteditable', 'true');
-  //(function() {var ds = document.getElementsByTagName('div');var d = ds[Math.round(Math.random()*ds.length)];function transform(r) {d.style.transform=d.style['WebkitTransform']=d.style['MozTransform']='scale(' + r + ')';setTimeout(function() {transform(++r % 10);}, 100);}transform(1);})();
-  //(function() {var ds = document.getElementsByTagName('div');var d = ds[Math.round(Math.random()*ds.length)];function transform(r) {d.style.transform=d.style['WebkitTransform']=d.style['MozTransform']='rotate(' + r + 'deg)';setTimeout(function() {transform(++r % 360);}, 100);}transform(1);})()
-  (function(){var elems=document.getElementsByTagName('*');for(var i = 0; i<elems.length;i++){elems[i].style.fontFamily='Comic Sans MS';}})();
-};
 
 // Generate HEX Color
 function colorGen() {
@@ -51,8 +30,8 @@ function updateColor(c) {
       colors.push(colorGen())
     }
   } else {
-    if(colors.length > undos) { 
-      colors.shift(); 
+    if(colors.length > undos) {
+      colors.shift();
     }
     colors.push(c);
   }
@@ -86,11 +65,11 @@ $(document).ready(function() {
 
   // KeyListener for space
   document.addEventListener('keyup',function(e){
-      if(!konamiActivated && e.keyCode === 32){
+      if(e.keyCode === 32){
         updateColor(colorGen());
         $('#back').css('opacity', '1');
         $('#back').removeClass('notBack');
-      } else if (!konamiActivated && e.keyCode === 39) {
+      } else if (e.keyCode === 39) {
         updateColor(colorGen());
         $('#back').css('opacity', '1');
         $('#back').removeClass('notBack');
