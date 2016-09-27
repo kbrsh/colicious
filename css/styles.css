@@ -14,6 +14,20 @@ button {
   cursor: pointer;
 }
 
+#undos {
+  float: right;
+  margin-left: 3px;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 10px;
+}
+
 /* Contain(er) styling */
 
 .contain {
