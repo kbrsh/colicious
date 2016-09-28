@@ -6,4 +6,4 @@ A delicious color generator.
 
 - [Kabir](http://kabir.ml)
 - [Marc](http://momueller.com/)
-- [Styd](https://github.com/styd)
+- [Adrian](https://github.com/styd)
