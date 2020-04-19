@@ -37,6 +37,13 @@ function updateColor(c) {
   }
   //$('.ripple').css('background', previousColor);
   $('#color').html(colors[colors.length - 1]);
+
+/* 
+  To update the text in the 
+  additional placeholder as well for clipboard to work 
+*/
+  $('#color-clipboard').html(colors[colors.length - 1]);
+
   $('body').css('background', colors[colors.length - 1]);
   $('#undos').html(colors.length - 1);
   $('#undos').css('color', colors[colors.length - 1]);

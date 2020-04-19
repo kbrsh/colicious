@@ -266,6 +266,20 @@ button {
   top: 0;
 }
 
+/* 
+  To Avoid takin up space and removing the visibility 
+
+  == attempts that didn't work==
+  visible:hidden 
+  display:none 
+*/
+
+.nullify{
+  width:0px;
+  height:0px;
+  opacity: 0;
+}
+
 @-webkit-keyframes load7 {
   0%,
   80%,
